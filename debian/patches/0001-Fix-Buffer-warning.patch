@@ -1,0 +1,23 @@
+From e8bf7c0fac6e95050831a0c06ffd0cee643f7826 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Bastien=20Roucari=C3=A8s?= <rouca@debian.org>
+Date: Mon, 7 Jan 2019 01:45:29 +0100
+Subject: Fix Buffer() warning
+
+Forwarded: https://github.com/crypto-browserify/ripemd160/issues/22
+---
+ test/index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/test/index.js b/test/index.js
+index ac1adcc..f6a9755 100644
+--- a/test/index.js
++++ b/test/index.js
+@@ -5,7 +5,7 @@ var vectors = require('hash-test-vectors')
+ var RIPEMD160 = require('../')
+ 
+ vectors.forEach(function (vector, i) {
+-  var input = new Buffer(vector.input, 'base64')
++  var input = new Buffer.from(vector.input, 'base64')
+ 
+   test('vector #' + (i + 1) + ' with .update', function (t) {
+     t.same(new RIPEMD160().update(input).digest('hex'), vector.ripemd160)

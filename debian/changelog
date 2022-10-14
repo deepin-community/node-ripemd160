@@ -1,0 +1,68 @@
+node-ripemd160 (2.0.2-6) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on dpkg-dev.
+
+  [ Yadd ]
+  * Update standards version to 4.6.0, no changes needed.
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Fix filenamemangle
+  * Fix GitHub tags regex
+  * Drop dependency to nodejs
+  * Use dh-sequence-nodejs auto test & install
+
+ -- Yadd <yadd@debian.org>  Tue, 09 Nov 2021 12:06:21 +0100
+
+node-ripemd160 (2.0.2-5) unstable; urgency=medium
+
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on node-hash-base, node-inherits,
+      node-tap, node-tape and nodejs.
+    + node-ripemd160: Drop versioned constraint on node-hash-base, node-inherits
+      and nodejs in Depends.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sat, 28 Aug 2021 22:33:28 +0100
+
+node-ripemd160 (2.0.2-4) unstable; urgency=medium
+
+  * Move to /usr/share
+  * Bump policy (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 20 Sep 2019 23:06:39 +0200
+
+node-ripemd160 (2.0.2-3) unstable; urgency=medium
+
+  * Fix CI with nodejs 10
+  * Bump compat and policy (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 07 Jan 2019 01:48:07 +0100
+
+node-ripemd160 (2.0.2-2) unstable; urgency=medium
+
+  * Improve cli test
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 09 May 2018 15:31:35 +0200
+
+node-ripemd160 (2.0.2-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump compat and policy (no changes)
+  * Move to section javascript
+  * Move to salsa
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 07 May 2018 16:00:01 +0200
+
+node-ripemd160 (2.0.1+20172804git0cd03c4f72385-1) unstable; urgency=low
+
+  * Initial release (Closes: #861405)
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 28 Apr 2017 14:56:33 +0200
